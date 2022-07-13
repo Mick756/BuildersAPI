@@ -1,5 +1,7 @@
-package api.builders.scoreboards;
+package api.builders.events;
 
+import api.builders.scoreboards.ScoreboardBuilder;
+import api.builders.scoreboards.ScoreboardProvider;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 

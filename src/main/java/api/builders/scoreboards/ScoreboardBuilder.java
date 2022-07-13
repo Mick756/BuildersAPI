@@ -4,6 +4,7 @@ import api.builders.Globals;
 
 import java.util.*;
 
+import api.builders.events.ScoreboardTimerEndEvent;
 import api.builders.misc.Animation;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;

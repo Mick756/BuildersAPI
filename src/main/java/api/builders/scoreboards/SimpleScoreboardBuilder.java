@@ -3,6 +3,8 @@ package api.builders.scoreboards;
 import api.builders.Globals;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
@@ -24,7 +26,7 @@ public class SimpleScoreboardBuilder extends ScoreboardProvider {
 	
 	public SimpleScoreboardBuilder(Plugin instance, String name) {
 		this.instance = instance;
-		this.scoreboard = Bukkit.getServer().getScoreboardManager().getNewScoreboard();
+		this.scoreboard = Objects.requireNonNull(Bukkit.getServer().getScoreboardManager()).getNewScoreboard();
 		this.entries = new ArrayList<>();
 		this.objective = this.scoreboard.registerNewObjective("ssb", "dummy", Globals.color(name));
 	}

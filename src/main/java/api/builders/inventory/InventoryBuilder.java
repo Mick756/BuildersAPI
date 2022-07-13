@@ -10,6 +10,10 @@ public class InventoryBuilder {
 	
 	private final Inventory inventory;
 	
+	public InventoryBuilder() {
+		this.inventory = Bukkit.createInventory(null, 54);
+	}
+	
 	public InventoryBuilder(InventoryType type) {
 		this.inventory = Bukkit.createInventory(null, type);
 	}
@@ -36,7 +40,7 @@ public class InventoryBuilder {
 	}
 	
 	public InventoryBuilder setItem(int slot, ItemStack stack) {
-		if (slot >= this.inventory.getSize()) throw new IndexOutOfBoundsException(slot);
+		if (slot >= this.inventory.getSize() || slot < 0) throw new IndexOutOfBoundsException(slot);
 		
 		this.inventory.setItem(slot, stack);
 		return this;

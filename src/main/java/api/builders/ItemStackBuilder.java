@@ -1,16 +1,12 @@
 package api.builders;
 
-import api.builders.misc.Animation;
-import api.builders.misc.TaskUtils;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -52,6 +48,11 @@ public class ItemStackBuilder {
 	
 	public ItemStackBuilder setGlassColor(DyeColor color) {
 		return this.setDurability(color.getWoolData());
+	}
+	
+	public ItemStackBuilder unbreakable() {
+		this.meta.setUnbreakable(true);
+		return this;
 	}
 	
 	public ItemStackBuilder setDurability(short durability) {

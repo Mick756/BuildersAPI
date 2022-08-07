@@ -14,6 +14,14 @@ public class TaskUtils {
 		return Bukkit.getScheduler().runTask(plugin, runnable);
 	}
 	
+	public static BukkitTask doAsyncLater(JavaPlugin plugin, Runnable runnable, long wait) {
+		return Bukkit.getScheduler().runTaskLaterAsynchronously(plugin, runnable, wait);
+	}
+	
+	public static BukkitTask doSyncLater(JavaPlugin plugin, Runnable runnable, long wait) {
+		return Bukkit.getScheduler().runTaskLater(plugin, runnable, wait);
+	}
+	
 	public static BukkitTask doAsyncTimer(JavaPlugin plugin, Runnable runnable, long delay, long interval) {
 		return Bukkit.getScheduler().runTaskTimerAsynchronously(plugin, runnable, delay, interval);
 	}

@@ -6,7 +6,7 @@
 
     <groupId>api.builders</groupId>
     <artifactId>BuildersAPI</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.5</version>
 
     <build>
         <plugins>
